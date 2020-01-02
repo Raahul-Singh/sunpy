@@ -431,6 +431,9 @@ class TestTimeSeries:
         assert sunpy.timeseries.TimeSeries._validate_meta(valid_meta_1)
         valid_meta_2 = OrderedDict({'key': 'value'})
         assert sunpy.timeseries.TimeSeries._validate_meta(valid_meta_2)
+        time_range = sunpy.time.TimeRange('2020-01-01 12:00', '2020-01-02 12:00')
+        valid_meta_3 = sunpy.timeseries.TimeSeriesMetaData(time_range)
+        assert sunpy.timeseries.TimeSeries._validate_meta(valid_meta_3)
         invalid_meta = []
         assert not sunpy.timeseries.TimeSeries._validate_meta(invalid_meta)
 
