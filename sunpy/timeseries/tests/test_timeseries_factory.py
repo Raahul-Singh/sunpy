@@ -281,8 +281,8 @@ class TestTimeSeries:
         meta_md = MetaDict({'key': 'value'})
         meta_di = {'key': 'value'}
         meta_od = OrderedDict({'key': 'value'})
-        meta_obj = sunpy.timeseries.TimeSeriesMetaData(timerange=tr, colnames=['GOES'], 
-                                                        meta=MetaDict({'key': 'value'}))
+        meta_obj = sunpy.timeseries.TimeSeriesMetaData(timerange=tr, colnames=['GOES'],
+                                                       meta=MetaDict({'key': 'value'}))
 
         # Create TS using different dictionary meta types
         ts_md = sunpy.timeseries.TimeSeries(data, meta_md, units)
