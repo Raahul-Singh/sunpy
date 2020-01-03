@@ -289,7 +289,6 @@ class TestTimeSeries:
         ts_di = sunpy.timeseries.TimeSeries(data, meta_di, units)
         ts_od = sunpy.timeseries.TimeSeries(data, meta_od, units)
         ts_obj = sunpy.timeseries.TimeSeries(data, meta_obj, units)
-
         assert ts_md == ts_di == ts_od == ts_obj
         assert ts_md.meta.metadata[0][2] == ts_di.meta.metadata[0][2] == ts_od.meta.metadata[0][2] == ts_obj.meta.metadata[0][2]
 
