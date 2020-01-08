@@ -273,7 +273,7 @@ class TestTimeSeries:
         base = parse_time(datetime.datetime.today())
         times = base - TimeDelta(np.arange(24 * 60)*u.minute)
         intensity = np.sin(np.arange(0, 12 * np.pi, ((12 * np.pi) / (24*60))))
-        tr = sunpy.time.TimeRange('2012-06-01 00:00', '2012-06-02 00:00')
+        tr = sunpy.time.TimeRange(times[0], times[-1])
 
         # Create the data DataFrame, header MetaDict and units OrderedDict
         data = DataFrame(intensity, index=times, columns=['intensity'])
